@@ -32,7 +32,9 @@ export default {
   */
   css: [
   ],
-  ...routerBase,
+  router: {
+    base: '/ng/'
+  },
   /*
   ** Plugins to load before mounting the App
   */
