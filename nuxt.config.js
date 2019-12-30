@@ -1,5 +1,11 @@
 import colors from 'vuetify/es5/util/colors'
 
+const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
+  router: {
+    base: '/ng/'
+  }
+} : {}
+
 export default {
   mode: 'spa',
   /*
@@ -26,6 +32,7 @@ export default {
   */
   css: [
   ],
+  ...routerBase,
   /*
   ** Plugins to load before mounting the App
   */
